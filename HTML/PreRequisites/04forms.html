@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Let's Learn the Concept of Forms</h2>
+
+    <!-- Basic Form  -->
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your Name" />
+      <br />
+
+      <!-- for drop down menu -->
+      <label for="frontend">Web Development</label>
+      <select id="frontend">
+        <optgroup label="Frontend">
+          <option>HTML</option>
+          <option>CSS</option>
+          <option>JS</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option>Node JS</option>
+          <option>Express JS</option>
+          <option>Mongo DB</option>
+        </optgroup>
+      </select>
+      <br /><br />
+
+      <label for="reviews">Reviews</label>
+      <textarea rows="6" cols="50" id="reviews"></textarea>
+      <br /><br />
+
+      <button>Submit</button>
+    </form>
+
+    <!-- Advance form  -->
+    <form>
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name1">Name</label>
+        <input type="text" id="name1" placeholder="Enter your Name">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" placeholder="example@gmail.com" id="email">
+        <br>
+        <label for="dob">DOB</label>
+        <input type="date" id="dob">
+        <br>
+        <button>Verify</button>
+      </fieldset>
+    </form>
+
+    <!-- Checking Heat and trial -->
+     <form>
+        <fieldset>
+            <legend>Testing</legend>
+            <label for="color">Color</label>
+            <input type="color" id="color">
+            <br>
+            <label for="checkbox">Checkbox</label>
+            <input type="checkbox" id="checkbox">
+            <br>
+            <label for="range">Range</label>
+            <input type="range" max="10">
+        </fieldset>
+     </form>
+
+     <!-- Student Registration form  (not removing any default attribute)  -->
+      <h1>Student Registration Form</h1>
+      <form action="">
+        <fieldset>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name2">Name</label>
+                <input type="text" name="" id="name2" placeholder="Enter Your Name">
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" name="" id="email" placeholder="example@gmail.com">
+                <br><br>
+                <label for="contact">Contact</label>
+                <input type="number" name="" id="contact" placeholder="987654321">
+            </fieldset>
+            <fieldset>
+                <legend>Address Details</legend>
+                <label for="address">Address</label>
+                <textarea name="" id="address"></textarea>
+                <br><br>
+                <label for="state">State</label>
+                <select name="" id="state">
+                    <option value="">Bihar</option>
+                    <option value="">Uttar Pradesh</option>
+                    <option value="">Jharkhand</option>
+                </select>
+                <br><br>
+                <label for="coutntry">Country</label>
+                <select name="" id="coutntry">
+                    <option value="">India</option>
+                    <option value="">America</option>
+                    <option value="">Africa</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Education Details</legend>
+                <label for="10th">10th Percentage</label>
+                <input type="number">
+                <br><br>
+                <label for="12th">12th Percentage</label>
+                <input type="number">
+                <br><br>
+                <label for="B.tech">B.tech Percentage</label>
+                <input type="number">
+                <br><br>
+                <label for="course">Course</label>
+                <select name="" id="course">
+                    <optgroup label="Frontend">
+                        <option value="">HTML</option>
+                        <option value="">CSS</option>
+                        <option value="">JS</option>
+                    </optgroup>
+                    <optgroup label="Backend">
+                        <opiton>React JS</opiton>
+                        <opiton>MongoDB</opiton>
+                        <opiton>Node JS</opiton>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <br>
+            <button>Submit</button>
+        </fieldset>
+        <br><br>
+      </form>
+
+      <!-- Testing (Self Learning/Practice) -->
+      <form>
+        <label for="test">Testing</label><br><br>
+        <input type="file"><br><br>
+        <label for="test">hidden</label>
+        <input type="hidden"><br><br>
+        <label for="">image</label>
+        <input type="image"><br><br>
+        <label for="">passsword</label>
+        <input type="password"><br><br>
+        <label for="">search</label>
+        <input type="search"><br><br>
+        <label for="">URL</label>
+        <input type="url"><br><br>
+        <label for="">week</label>
+        <input type="week"><br><br>
+
+        <button><input type="hidden">Apply</button>
+      </form>
+  </body>
+</html>
+
+<!-- 
+  1. parent form tag hai
+  2. input se user text liya jata hai
+  3. label ka for and input/select etc ka id same hoga to uss word pe click karne pe fill ka opiton aayega 
+-->
