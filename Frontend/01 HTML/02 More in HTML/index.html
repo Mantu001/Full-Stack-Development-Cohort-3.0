@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More in HTML</title>
+    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+    <!-- index/noindex/follow/nofollow-->
+    <meta name="keywords" content="" />
+    <!-- currently no use -->
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <p>Below courses is the new html page</p>
+    <a href="courses.html">Courses</a>
+
+    <h3>About head tag</h3>
+    <ul>
+        <li>
+            &lt;!DOCTYPE html&gt; is used for showing that i am using modern html
+        </li>
+        <li>body tag me user ke liye content hota hai</li>
+        <li>head tag me broweser ke liye content hota hai</li>
+        <li>
+            hamara search engine html ko samajhta hai jabhi AI jo hai wo normal text
+            ko samajhta hai
+        </li>
+        <li>for ai use markdown it help to run our website on AI platform</li>
+    </ul>
+
+    <h3>Knowledge about performance of web page</h3>
+    <ul>
+        <li>
+            LCP (Largest contenetful pain) - website ka first page load hone me
+            kitna time lagta hai
+        </li>
+        <li>
+            INP (Interaction to next point) - click karte hi next page kitne der me
+            open ho raha hai
+        </li>
+        <li>
+            CLS (Cummulative layout shift) - page load hote hote apne layout to
+            change nhi na kar raha hai?
+        </li>
+    </ul>
+    <br />
+    <hr />
+
+    <!-- copy paste from notes not understand after js study it is understandable -->
+    <dialog id="my-modal">
+        <h2>Are you sure?</h2>
+        <p>This action cannot be undone.</p>
+        <button onclick="document.getElementById('my-modal').close()">
+            Cancel
+        </button>
+        <button>Confirm</button>
+    </dialog>
+    <button onclick="document.getElementById('my-modal').showModal()">
+        Open modal
+    </button>
+    <br />
+    <hr />
+
+    <!--meter tag doubt self explore-->
+    <label for="disk">Disk Usage</label>
+    <meter id="disk" value="10" min="0" max="10" low="2" high="8" optimum="5">
+        32GB
+    </meter>
+    <br />
+    <hr />
+
+    <label for="upload">Upload progress:</label>
+    <progress id="upload" value="70" max="100">70%</progress>
+    <br>
+    <hr>
+
+    <label for="cit">City</label>
+    <input list="cities" name="city" placeholder="Type a city..." id="cit">
+    <datalist id="cities">
+        <option value="Mumbai">
+        <option value="Delhi">
+        <option value="Bangalore">
+        <option value="Chennai">
+        <option value="Hyderabad">
+    </datalist>
+    <br><hr>
+
+    <!-- some knowledge about git and github -->
+    <p>git is a technology</p>
+    <p>while github is a tools which work on this technology</p>
+</body>
+
+</html>
