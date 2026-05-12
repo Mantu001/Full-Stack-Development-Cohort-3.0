@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#box{
+    height:20%;
+    width: 10%;
+    background-color: royalblue;
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    /* transform: translate(-50% ,-50%); */
+    border-radius: 10%;
+    color: white;
+    padding: 20px;
+    /* transform: rotate(50de); */
+}
+#box:hover{
+    transform: rotate(3650deg);
+    cursor: pointer;
+    transition: all ease 4s;
+}
+
+/* here we know the difference of position relationve and absolulte */
+#parent{
+    height: 200px;
+    width: 200px;
+    background-color: blueviolet;
+    position: relative;
+}
+#child{
+    height: 50%;
+    width: 50%;
+    background-color: crimson;
+    position: absolute;
+    left: 50%;
+}
+.boxes{
+    height: 100px;
+    width: 100px;
+    background-color: burlywood;
+    border: 1px solid black;
+}
+.boxes:nth-child(2){
+    background-color: red;
+}
+.boxes:nth-last-child(3){
+    background-color: yellow;
+}
+/* .boxes:nth-last-child(3)- this show last box yellow because iske baad already 2 element hai lekin isko jaise hi ek alag div me rake sab thik ho gaya*/
+
+#page{
+    height: 100%;
+    width: 100%;
+    background-color: violet;
+}
+#page:nth-child(5){
+    background-color: blueviolet;
+}
+#page:nth-child(6){
+    background-color: rgb(94, 20, 163);
+}
+#page:nth-child(7){
+    background-color: rgb(77, 14, 136);
+}
+#page:nth-child(8){
+    background-color: rgb(40, 4, 74);
+}
