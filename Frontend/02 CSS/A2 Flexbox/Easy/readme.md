@@ -6,4 +6,4 @@ https://full-stack-development-cohort-3-0-3.vercel.app/
 
 ## 🖼 Preview
 
-![Preview](Assets/preview.png)
+![Preview](Assets/preview.png) 
