@@ -11,6 +11,7 @@ html,body {
 }
 @import url('https://fonts.googleapis.com/css2?family=Nokora:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/******************* Main/Container  */
 main{
     background-color: black;
     height: 100%;
@@ -31,6 +32,39 @@ main{
     border-radius: 30px;
     font-family: "Nokora", sans-serif;
 }
+
+/******************* Multiple used  */
+p{
+    font-size: 10px;
+    margin-top: 10px;
+    color: gray;
+}
+h2{
+    font-size: 12px;
+    color: gray;
+}
+h6{
+    font-size: 14px;
+    margin-top: 10px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: clip;
+    border-radius: 20px;
+    align-self: center;
+}
+.arrow-btn{
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+/******************* About  */
 .about{
     background-color: #262626;
     border: 4px solid black;
@@ -46,7 +80,7 @@ main{
     align-items: center;
 }
 .top h2{
-    font-size: 12px;
+    color: white;
 }
 .top h2 span{
     color: gray;
@@ -56,11 +90,8 @@ main{
     height: 40px;
     border-radius: 50%;
 }
-.about p{
-    font-size: 10px;
-    margin-top: 10px;
-    color: gray;
-}
+
+/******************* Phone  */
 .phone{
     background-color: #262626;
     border: 4px solid black;
@@ -68,14 +99,8 @@ main{
     margin: 5px;
     grid-area: phone;
 }
-.phone-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: clip;
-    border-radius: 20px;
-    align-self: center;
-}
+
+/******************* Tab  */
 .tab{
     background-color: #262626;
     border: 4px solid black;
@@ -83,14 +108,8 @@ main{
     margin: 5px;
     grid-area: tab;
 }
-.tab-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: clip;
-    border-radius: 20px;
-    align-self: center;
-}
+
+/******************* Social Media  */
 .social-media{
     background-color: #262626;
     border-radius: 20px;
@@ -107,6 +126,8 @@ main{
     border: 4px solid black;
     font-size: 20px;
 }
+
+/******************* Profile  */
 .profile{
     background-color: #262626;
     border: 4px solid black;
@@ -114,14 +135,8 @@ main{
     margin: 5px;
     grid-area: profile;
 }
-.profile img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: clip;
-    border-radius: 20px;
-    align-self: center;
-}
+
+/******************* Stack  */
 .stack{
     background-color: #262626;
     border: 4px solid black;
@@ -129,14 +144,6 @@ main{
     margin: 5px;
     grid-area: stack;
     padding: 20px;
-}
-.stack h2{
-    color: gray;
-    font-size: 13px;
-}
-.stack h6{
-    font-size: 15px;
-    margin-top: 10px;
 }
 .stack-logo{
     display: flex;
@@ -152,6 +159,8 @@ main{
     border-radius: 10px;
     margin: 15px 0;
 }
+
+/******************* Laptop  */
 .laptop{
     background-color: #262626;
     border: 4px solid black;
@@ -159,14 +168,8 @@ main{
     margin: 5px;
     grid-area: laptop;
 }
-.laptop-img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    overflow: clip;
-    border-radius: 20px;
-    align-self: center;
-}
+
+/******************* Resource  */
 .resource{
     background-color: #262626;
     border: 4px solid black;
@@ -176,22 +179,8 @@ main{
     padding: 15px;
     position: relative;
 }
-.resource h2{
-    color: gray;
-    font-size: 13px;
-}
-.resource h6{
-    font-size: 14px;
-    margin-top: 10px;
-}
-.resource i{
-    padding: 5px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.418);
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-}
+
+/******************* Toggle  */
 .toggle{
     background-color: #262626;
     border: 4px solid black;
@@ -202,9 +191,12 @@ main{
     justify-content: center;
     align-items: center ;
 }
-.toggle-img{
-    width: 50px;
+.toggle #toggle-img{
+    width: 40%;
+    height: 40%;
 }
+
+/******************* Bottom Left  */
 .bottom-left{
     background-color: #262626;
     border: 4px solid black;
@@ -220,11 +212,12 @@ main{
     color: gray;
     margin-top: 10px;
 }
-.framer-img{
+.bottom-left img{
     width: 130px;
-    height: 100px;
-    
+    height: 100px; 
 }
+
+/******************* Bottom Right  */
 .bottom-right{
     background-color: #262626;
     border: 4px solid black;
@@ -233,18 +226,6 @@ main{
     grid-area: bottom-right;
     position: relative;
     padding: 20px 30px;
-}
-.bottom-right i{
-    padding: 5px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.418);
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-}
-.bottom-right p{
-    font-size: 12px;
-    color: gray;
 }
 .bottom-right h4{
     margin: 10px 0px;
