@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  padding: 20px 150px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nokora:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+main{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 20% 15% 20% 15% 30%;
+    grid-template-areas: 
+    "about about phone tab social-media"
+    "about about phone tab resource"
+    "profile stack laptop laptop resource"
+    "profile stack laptop laptop toggle"
+    "bottom-left bottom-left bottom-left bottom-right bottom-right"
+    ;
+    color: white;
+    background-color: #262626;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: "Nokora", sans-serif;
+}
+.about{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: about;
+    padding: 20px 30px;
+}
+.top{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.top h2{
+    font-size: 12px;
+}
+.top h2 span{
+    color: gray;
+}
+.top img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.about p{
+    font-size: 10px;
+    margin-top: 10px;
+    color: gray;
+}
+.phone{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: phone;
+}
+.phone-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: clip;
+    border-radius: 20px;
+    align-self: center;
+}
+.tab{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: tab;
+}
+.tab-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: clip;
+    border-radius: 20px;
+    align-self: center;
+}
+.social-media{
+    background-color: #262626;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: social-media;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.social-media i{
+    padding: 10px ;
+    border-radius: 20px;
+    border: 4px solid black;
+    font-size: 20px;
+}
+.profile{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: profile;
+}
+.profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: clip;
+    border-radius: 20px;
+    align-self: center;
+}
+.stack{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: stack;
+    padding: 20px;
+}
+.stack h2{
+    color: gray;
+    font-size: 13px;
+}
+.stack h6{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.stack-logo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+.stack-logo i{
+    font-size: 15px;
+    background-color: rgba(128, 128, 128, 0.281);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.laptop{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: laptop;
+}
+.laptop-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: clip;
+    border-radius: 20px;
+    align-self: center;
+}
+.resource{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: resource;
+    padding: 15px;
+    position: relative;
+}
+.resource h2{
+    color: gray;
+    font-size: 13px;
+}
+.resource h6{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.resource i{
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+.toggle{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: toggle;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.toggle-img{
+    width: 50px;
+}
+.bottom-left{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: bottom-left;
+    display: flex;
+    padding: 30px 30px ;
+    justify-content: space-between;
+}
+.bottom-left-text p{
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
+.framer-img{
+    width: 130px;
+    height: 100px;
+    
+}
+.bottom-right{
+    background-color: #262626;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    grid-area: bottom-right;
+    position: relative;
+    padding: 20px 30px;
+}
+.bottom-right i{
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+.bottom-right p{
+    font-size: 12px;
+    color: gray;
+}
+.bottom-right h4{
+    margin: 10px 0px;
+}
