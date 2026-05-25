@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 800;
+}
+.links{
+    display: flex;
+    gap: 20px;
+}
+h4{
+    font-weight: 300;
+}
+h5{
+    display: none;
+}
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    transition: all ease 0.3s;
+    
+}
+h1{
+    font-size: 42px;
+    transition: all ease 0.3s;
+}
+
+/********************* Media Queries  */
+@media (max-width: 500px) {
+    .box{
+    background-color: violet;
+    border-radius: 30px;
+    height: 300px;
+    width: 300px;
+    transition: all ease 0.3s;
+    }  
+    h1{
+        font-size: 30px;
+        transition: all ease 0.3s;
+    }  
+    h4{
+        display: none;  
+    }
+    h5{
+        display: block;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+@media (max-width: 350px) {
+    .box{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: royalblue;
+        transition: all ease 0.3s;
+    }
+    h1{
+        transition: all ease 0.3s;
+        font-size: 20px;
+    }
+}
+
+/*********************************** Animations  */
+.parent{
+    height: 50%;
+    width: 50%;
+    position: relative;
+    background-color: crimson;
+}
+.child{
+    height: 100px;
+    width: 100px;
+    background-color: palevioletred;
+    border-radius: 20px;
+    /* animation-name: square; */
+    animation-duration: 2s;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* here we use infinite for running so many times */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+}
+
+/*************** This is by using from and to only  */
+/* @keyframes move {
+    from{
+        left: 0;
+        background-color: palegreen;
+        rotate: 0;
+    }
+    to{
+        left: 75%;
+        background-color: violet;
+        rotate: 1080deg;
+    }
+} */
+
+@keyframes square {
+    0%{
+        left: 0;
+        top: 0;
+    }
+    25%{
+        left: 60%;
+        top: 0;
+       background-color: paleturquoise;
+    }
+    50%{
+        left: 60%;
+        top: 60%;
+        background-color: palegoldenrod;
+    }
+    75%{
+        left: 0%;
+        top: 60%;
+        background-color: aquamarine;
+    }
+    100%{
+        left: 0%;
+        top: 0;
+        
+    }
+}
+/************************************* Marque effect  */
+.sheryians{
+    /* height: 40px; */
+    /* width: 100%; */
+    background-color: aqua;
+    display: flex;
+    /* align-items: center; */
+    /* animation-name: sher; */
+    animation-duration: 1.5s;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: linear;
+    overflow: hidden;
+}
+.sheryians h4{
+    font-size: 50px;
+    font-weight: 600;
+    padding: 10px 30px;
+    background-color: royalblue;
+}
+
+@keyframes sher {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/************************** Marque 2 for different name */
+.earth{
+    /* background-color: aqua; */
+    display: flex;
+    padding: 10px;
+    overflow: hidden;
+}
+.country{
+    background-color: bisque;
+    display: flex;
+    /* padding: 10px; */
+    animation-name: chal;
+    animation-duration: 5s;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: linear;
+}
+.country h4{
+    font-size: 20px;
+    padding: 20px 40px;
+    /* background-color: coral; */
+}
+.country:hover{
+    animation-play-state: paused;
+}
+
+@keyframes chal {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

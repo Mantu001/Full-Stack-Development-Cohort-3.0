@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+}
+/****************************** Practice 1 */
+.easy{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 15% 55% 30%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "top-left top-left right"
+    "bottom-left center-bottom right"
+    ;
+    padding: 10px 100px;
+}
+.easy div{
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+.nav{
+    grid-area: nav;
+    background-color: palevioletred;
+}
+.top-left{
+    grid-area: top-left;
+    background-color: palegoldenrod;
+}
+.right{
+    grid-area: right;
+    background-color: palegreen;
+}
+.bottom-left{
+    grid-area: bottom-left;
+    background-color: paleturquoise;
+}
+.center-bottom{
+    grid-area: center-bottom;
+    background-color: lightsalmon;
+}
+h1{
+    height: 50px;
+    width: 100%;
+    background-color: cyan;
+}
+
+/***************************** Practice 2  */
+
+/***************************** Practice 3  */
+.hard{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 35% 25% 10% 30%;
+    grid-template-areas: 
+    "tl tl tr"
+    "cl c cr"
+    "cl bc cr"
+    "bl bc cr"
+    ;
+    padding: 10px 20%;
+}
+.hard div{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+.tl{
+    grid-area: tl;
+    background-color: #F4EFE5;
+}
+.tr{
+    grid-area: tr;
+    background-color: #004C41;
+}
+.cl{
+    grid-area: cl;
+    background-color: #D60000;
+}
+.c{
+    grid-area: c;
+    background-color: #F4EFE5;
+}
+.cr{
+    grid-area: cr;
+    background-color: #F4EFE5;
+}
+.bc{
+    grid-area: bc;
+    background-color: #004C41;
+}
+.bl{
+    grid-area: bl;
+    background-color: #F4EFE5;
+}

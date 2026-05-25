@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  padding: 0 60px;
+  font-family: "nokora";
+}
+section{
+  height: 100%;
+  width: 100%;
+}
+nav{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: 100px;
+  cursor: pointer;
+}
+.link{
+  font-size: 15px;
+  font-weight: 600;
+}
+.link a{
+  padding: 0 10px;
+  text-decoration: none;
+  color: black;
+}
+.login-btn{
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.login-btn:hover{
+  background-color: black;
+  color: white;
+}
+.contact-btn{
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.contact-btn:hover{
+  background-color: white;
+  color: black;
+}
+.hero-div{
+  border-radius: 20px;
+  width: 100%;
+  height: calc(100% - 80px);
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left{
+  width: 50%;
+  height: 80%;
+  display: flex;  
+  flex-direction: column;
+  padding: 0 30px;
+}
+.rating{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 40px;
+  gap: 10px;
+  align-items: center;
+}
+.rating i{
+  font-size: 30px;
+}
+.rate h4{
+  font-size: 20px ;
+  font-weight: 400;
+}
+.rate p{
+  font-size: 10px;
+  color: gray;
+}
+.left h1{
+  font-size: 80px;
+  font-weight: 500;
+}
+.left p{
+  font-size: 10px;
+  color: gray;
+}
+.contact-btn i {
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  margin-right: 10px;
+}
+.left h2{
+  font-size: 15px;
+  color: gray;
+  padding-bottom: 20px;
+}
+.btn{
+  padding: 30px 0px;
+}
+.brand{
+  display: flex;
+  gap: 20px;
+}
+.brand img{
+  height: 20px;
+  cursor: pointer;
+}
+.right{
+  width: 50%;
+  height: 90%;
+  padding: 0 20px;
+}
+.right img{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/**************************** Section 2  */
+.sec-2{
+  height: 55%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  gap: 20px;
+}
+.left-sec{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  gap: 20px;
+}
+.card{
+  height: 100%;
+  width: 50%;
+}
+.card-img{
+  position: relative;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.card-img:hover{
+  padding: 20px;
+  transition: all ease 0.2s;
+}
+.card-img img{
+  width: 100%;
+  border-radius: 20px;
+}
+.card-img i{
+  position: absolute;
+  font-size: 18px;
+  right: 10px;
+  top: 10px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+.card-txt{
+  display: flex;
+  justify-content: space-between;
+}
+.card-txt h4{
+  font-weight: 500;
+  font-size: 15px;
+}
+.card-txt p{
+  font-size: 10px;
+  color: gray;
+}
+.right-sec{
+  width: 50%;
+  height: 370px;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  gap: 50px;
+  background-color: #FAFAFA;
+}
+.left-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.left-card h4{
+  color: gray;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.left-card h2{
+  font-weight: 400;
+  font-size: 22px;
+}
+.left-card h3{
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.left-card div{
+  position: relative;
+}
+.left-card i{
+  bottom: 20px;
+  padding: 2px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
+.right-card img{
+  border-radius: 20px;
+  width: 350px;
+  cursor: pointer;
+}
+.right-card img:hover{
+  padding: 20px;
+  transition: all ease 0.2s;
+  border-radius: 20px;
+}
+
+/************************** Section 3  */
+.acco{
+  font-size: 70px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+.txt-box{
+  background-color: #FAFAFA;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  border-radius: 10px;
+}
+.txt-box h4{
+  font-weight: normal;
+  width: 25%;
+}
+#unique{
+  padding: 25px 13%;
+  margin: 0 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: fit-content;
+  margin-right: 150px;
+}
+.parent{
+  background-color: #FAFAFA;
+  height: 50%;
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+  display: flex;
+}
+.child1{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(128, 128, 128, 0.377);
+}
+.child1 .left{
+  position: relative;
+}
+.child1 .left img{
+  border-radius: 15px;
+  cursor: pointer;
+}
+.child1 .left img:hover{
+  padding: 20px;
+  transition: all ease 0.2s;
+}
+.child1 .left i{
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 50px;
+}
+.child1 .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 40px;
+  background-color: #FAFAFA;
+}
+.child1 .right h4{
+  color: gray;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.child1 .right h2{
+  font-weight: 400;
+  font-size: 22px;
+}
+.child1 .right h3{
+  font-size: 15px;
+  font-weight: 400;
+}
+.child1 .right div{
+  position: relative;
+}
+.child1 .right i{
+  padding: 2px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  left: 33%;
+  bottom: 10%;
+}
+.child2{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+.child2 .left{
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.child2 .left h1{
+  font-size: 30px;
+}
+.child2 .left h6{
+  color: gray;
+  margin-bottom: 60px;
+}
+.child2 .left p{
+  color: black;
+  margin-bottom: 20px;
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details div{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.details h4,h5{
+  font-weight: normal;
+}
+.child2.right{
+  height: 100%;
+  width: 50%;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.right .clean{
+  height: 40%;
+  gap: 20px;
+  display: flex;
+  font-weight: normal;
+}
+.right .clean img{
+  height: 30px;
+  width: 30px;
+}
+.right .clean h3{
+  font-weight: normal;
+}
+.booknow button{
+  padding: 10px 100px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.booknow button:hover{
+  background-color: white;
+  color: black;
+}

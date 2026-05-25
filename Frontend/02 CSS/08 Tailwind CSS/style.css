@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+}
+.ab h1{
+    font-size: 30px;
+    color: royalblue;
+    background-color: yellow;
+}
+/* here after/before is used ot add a virtual element in our HTML file though CSS */
+/* Also we can add any styling to this content also */
+/* This is inline element */
+/* it is mainly used ot add animation to a element */
+.ab h1::after{
+    content: " Mantu Kumar Tiwari";
+    color: red;
+    font-size: 40px;
+}
+.ab h1::before{
+    content: "Hello ";
+    color: brown;
+    font-size: 20px;
+}
+.box{
+    height: 200px;
+    width: 400px;
+    background-color: royalblue;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 30px;
+}
+/* why padding top is not applied to the after/before tag */
+/* because it is an iline element to use padding-top give it to display: inline-block/block or positon: absolure; */
+/* we cant give height and width to inline element */
+.box::after{
+    content: " after box";
+    color: white;
+    font-size: 20px;
+}
+.box::before{
+    content: " before box ";
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+}
+/********************************************************** Unerline Animation */
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap: 10px;
+}
+h4{
+    position: relative;
+    cursor: pointer;
+}
+h4::after{
+    content: "";
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    background-color: red;
+    left: 50%;
+    /* right: 0; */
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all ease 0.2s;
+}
+h4:hover::after{
+    width: 100%;
+}
+
+/**************************************** Animation on box  */
+.anime button{
+    margin: 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: orangered;
+    border: 2px solid orangered;
+    background: transparent;
+    position: relative;
+    font-size: 20px;
+    transition: all ease 0.2s;
+    overflow: hidden;
+    font-weight: 600;
+}
+.btn-1::after{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: rgb(123, 35, 2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+    z-index: -1;
+}
+.btn-1:hover{
+    color: white;
+    border: 2px solid white;
+}
+.btn-1:hover::after{
+    width: 100%;
+    color: white;
+}
+.btn-2::after{
+    content: "";
+    height: 0px;
+    width: 0px;
+    background-color: royalblue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: all ease 0.2s;
+    z-index: -9;
+}
+.btn-2:hover::after{
+    height: 160px;
+    width: 160px;
+    
+}
+.btn-2:hover{
+    border: 1px solid royalblue;
+    color: white;
+}
+
+/********************************** CSS Variable  */
+/* always create this on the top of the file */
+:root{
+    --king:rgb(236, 30, 30);
+    --queen:rgb(255, 143, 161);
+    --fs:10px 30px;
+}
+.variable h1{
+    color: var(--king);
+    padding: var(--fs);
+}
+.variable p{
+    background-color: var(--king);
+}
+.variable span{
+    color: var(--king);
+}
+.variable button{
+    padding: var(--fs);
+    border-radius: 10px;
+    color: var(--king);
+    font-weight: 700;
+    font-size: var(--fs);
+}
+
+/******************************* Clip path  */
+.clip-path{
+    height: 200px;
+    width: 200px;
+    background-color: palevioletred;
+    clip-path: polygon(0 0, 52% 100%, 51% 100%, 100% 0);
+}
+
+/************************ Designing Car  */
+.car{
+    height: 50%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url(https://t3.ftcdn.net/jpg/03/00/10/16/240_F_300101671_g05kRIreJ3N9RVmMwZIRJmh8BAFLyTxU.jpg);
+}
+.upper-body{
+    height: 50%;
+    width: 20%;
+    clip-path: polygon(30% 0%, 70% 0%, 88% 27%, 100% 27%, 100% 44%, 0 44%, 0 25%, 15% 24%);
+    background-color: crimson;
+    border: 5px solid black;
+    /* position: relative; */
+}
+.wheel{
+    height: 15%;
+    width: 40%;
+    /* background-color: crimson; */
+    position: absolute;
+    /* position: relative; */
+}
+.front{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 10px;
+    left: 30%;
+    background-color: black;
+    position: absolute;
+    color: white;
+    
+}
+.back{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 30%;
+    background-color: black;
+    color: white;
+    position: absolute;
+}
+.car-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
