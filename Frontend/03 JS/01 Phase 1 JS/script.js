@@ -53,6 +53,13 @@ var h = 'Mantu'
 var i = "Tiwari"
 console.log(h+i);
 
+// type conversion
+let str = '45'
+let num = Number(str)
+console.log(typeof(str));
+console.log(typeof(num));
+
+
 
 
 
