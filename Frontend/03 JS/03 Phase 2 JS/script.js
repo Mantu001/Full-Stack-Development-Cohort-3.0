@@ -57,8 +57,40 @@ console.log('hello');
 // a++
 // console.log(a);
 
-if (2 > 1){
-    const b = 10;
-    console.log(b);
+// if (2 > 1){
+//     var b = 10;
+//     console.log(b);
+// }
+// console.log(b);
+
+console.log(`hello kaise ho
+    this isthe multiline console log
+    which is written using tempelate literal (backtick)`);
+
+// let str = 'Mantu Kumar Tiwari'
+// console.log(str.length);
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// console.log(str.indexOf('Tiwari'));
+// console.log(str.includes('Kumar'));
+// console.log(str.slice(6,-8));
+
+// // Break and continue
+// for (var x=0; x<=10; x++){
+//     if (x%2 != 0){
+//         continue
+//     }
+//     console.log(x);
+// }
+
+var user = 'mantu'
+var naam = 'tiwari'
+var user = 'kaise ho'
+console.log(user);
+console.log(naam);
+
+// Funciton use cases
+function test(){
+    console.log('function is testing ');
 }
-console.log(b);
+test()
