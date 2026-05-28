@@ -608,3 +608,25 @@ if (num>=10 && num<100){
 }
 
 // 8. Create a mini ATM balance checker.
+
+console.log('hello' - 2);
+let sa = 5
+console.log(sa++);
+console.log(++sa);
+console.log(5 === '5');
+
+if ([]){
+    console.log('run');
+}
+
+console.log(true + true + false);
+{
+    var abc = 10
+}
+console.log(abc);
+console.log(typeof(null));
+
+let x1
+let x2 = null
+console.log(x1 == x2);
+console.log([]+[]);
