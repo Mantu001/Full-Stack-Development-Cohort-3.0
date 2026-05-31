@@ -328,3 +328,28 @@ var d1 = [10,20,30]
 var d2 = [1,2,3]
 d1.push('extra')
 console.log(d1.concat(d2));
+
+
+// ********************************* Revision
+var spArray = [1,2,3,4,5,6]
+// spArray.splice(1,3)
+console.log(spArray);
+
+var newArr = spArray.slice(1,3)
+console.log(newArr);
+
+
+spArray.forEach((value, index, array) => {
+    console.log(index, value);
+});
+
+var mapArr = spArray.map(function (elem) {
+    return elem[1]
+})
+console.log(mapArr);
+
+// for swaping value
+var p1 = 34;
+var p2 = 92;
+[p1,p2] = [p2,p1]
+console.log(p1,p2);
