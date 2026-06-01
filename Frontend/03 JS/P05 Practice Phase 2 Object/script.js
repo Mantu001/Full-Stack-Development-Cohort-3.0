@@ -34,5 +34,13 @@ user.isAdmin = true
 console.log('adding admin',user);
 
 // ### 5. Delete Property Remove the `password` property from the object.
+const account = {
+  username: "john",
+  password: "12345"
+}
+delete account.password
+console.log(account);
 
+
+// ******************************************** Intermediate Level
 
