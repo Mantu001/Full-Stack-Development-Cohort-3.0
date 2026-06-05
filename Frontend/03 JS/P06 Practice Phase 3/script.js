@@ -1,71 +1,103 @@
-// ************************* SELF PRACRICE phase 2
-// Basic function
-function multiply (a,b){
-    console.log(a*b);
+// *************************** SELF PRACTICE phase 1
+// fasly value
+if (NaN){  // 0, '', null, false, NaN, unidentified
+    console.log('true');
+}else{
+    console.log('false');
 }
-multiply(3,7)
 
-// Function Expression
-var check = (age) => {
-    if(age<0){
-        return 'invalid input'
-    }else if(age>=18){
-        return 'adult'
-    }
-    return 'Minor'
+// loops
+var num = [10,20,30,40,50,60,70]
+for (value of num){
+    console.log(value);
 }
-console.log(check(8));
+for (index in num){
+    console.log(index);
+}
 
-// Callback fuction
-function primary(cb) {
-    console.log('This is the primary function');
-    cb()
-}
-function called() {
-    console.log('This is the callback function');
-}
-primary(called)
+// Maths
+console.log('Printing Random value');
+// console.log(Math.floor(Math.random()*(9999-1000+1))+1000);
+// console.log(Math.floor(Math.random()*(9999-1000+1))+1000);
+// console.log(Math.floor(Math.random()*(9999-1000+1))+1000);
+// console.log(Math.floor(Math.random()*(9999-1000+1))+1000);
+// console.log(Math.floor(Math.random()*(9999-1000+1))+1000);
+console.log(Math.ceil(Math.random()*900)+100);
+console.log(Math.ceil(Math.random()*900)+100);
+console.log(Math.ceil(Math.random()*900)+100);
+console.log(Math.ceil(Math.random()*900)+100);
+console.log(Math.ceil(Math.random()*900)+100);
+console.log(Math.ceil(Math.random()*900)+100);
 
-// Array Basics
-var arr = [11,22,31,42,51]
-// arr.splice(1,2)
-console.log(arr);
-var join = arr.join('-')
-console.log(join);
-console.log(arr[-1]); // it return unidentified
-console.log(arr.at(-2)); // .at parameter can return from right side
-console.log(arr.reverse());
-console.log(arr.sort((a,b) => a-b));
-console.log(arr.at(1));
-arr.forEach((e,i) => {
-    console.log(e,i);
-})
-var double = arr.map((e,i) => {
-    return e*2
-})
-console.log(double);
-var filter = arr.filter((e) => {
-    return e%2 == 0
-})
-console.log(filter);
-var sum = arr.reduce((acc, val) => {
-    return acc+val
-},0)
-console.log(sum);
 
-// Object 
-var obj = {
-    user: 'Rahul',
-    age: 20,
-    isPlaced: true,
-    city: 'Delhi'
-}
-Object.keys(obj).forEach((e,i) => {
-    console.log(e,i);
-})
-Object.values(obj).forEach((e,i) => {
-    console.log(e,i);
-})
+// // ************************* SELF PRACRICE phase 2
+// // Basic function
+// function multiply (a,b){
+//     console.log(a*b);
+// }
+// multiply(3,7)
+
+// // Function Expression
+// var check = (age) => {
+//     if(age<0){
+//         return 'invalid input'
+//     }else if(age>=18){
+//         return 'adult'
+//     }
+//     return 'Minor'
+// }
+// console.log(check(8));
+
+// // Callback fuction
+// function primary(cb) {
+//     console.log('This is the primary function');
+//     cb()
+// }
+// function called() {
+//     console.log('This is the callback function');
+// }
+// primary(called)
+
+// // Array Basics
+// var arr = [11,22,31,42,51]
+// // arr.splice(1,2)
+// console.log(arr);
+// var join = arr.join('-')
+// console.log(join);
+// console.log(arr[-1]); // it return unidentified
+// console.log(arr.at(-2)); // .at parameter can return from right side
+// console.log(arr.reverse());
+// console.log(arr.sort((a,b) => a-b));
+// console.log(arr.at(1));
+// arr.forEach((e,i) => {
+//     console.log(e,i);
+// })
+// var double = arr.map((e,i) => {
+//     return e*2
+// })
+// console.log(double);
+// var filter = arr.filter((e) => {
+//     return e%2 == 0
+// })
+// console.log(filter);
+// var sum = arr.reduce((acc, val) => {
+//     return acc+val
+// },0)
+// console.log(sum);
+
+// // Object 
+// var obj = {
+//     user: 'Rahul',
+//     age: 20,
+//     isPlaced: true,
+//     city: 'Delhi'
+// }
+// Object.keys(obj).forEach((e,i) => {
+//     console.log(e,i);
+// })
+// Object.values(obj).forEach((e,i) => {
+//     console.log(e,i);
+// })
 
 
 // // ************************************ SELF PRACTICE phase 3
