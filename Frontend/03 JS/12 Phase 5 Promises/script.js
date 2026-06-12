@@ -90,19 +90,51 @@
 //     console.log('Data nhi aaya');
 // })
 
-console.log('************ Fetch api by using async and await');
-async function dataLao(){
-    const response = await fetch('https://fakestoreapi.com/products')
-    const data = await response.json()
-    data.forEach((e) => {
-        console.log(e);
-        console.log(e.id);
-        console.log(e.title);
-        console.log(e.price);
 
-    })
-}
-dataLao()
+// ***************************** self Practice 
+
+// console.log('************ Fetch api by using async and await');
+// async function dataLao(){
+//     const response = await fetch('https://fakestoreapi.com/products')
+//     const data = await response.json()
+//     data.forEach((e) => {
+//         console.log(e);
+//         console.log(e.id);
+//         console.log(e.title);
+//         console.log(e.price);
+//     })
+// }
+// dataLao()
+
+// var status = new Promise((resolve,reject) =>{
+//     let work = false
+//     if(work){
+//         console.log('kam chal raha hai ');
+//         resolve()
+//     }else{
+//         console.log('kam me problem aa gaya hai');
+//         reject()
+//     }
+// }).then(()=> {
+//     console.log('Done');
+// }).catch(() => {
+//     console.log('Failed');
+// })
+
+// var result = new Promise((res,rej) => {
+//     let num = 6
+//     if(num<5 && num>=0){
+//         console.log('chl gya');
+//         res()
+//     }else{
+//         console.log('ruk gya');
+//         rej()
+//     }
+// }).then(() => {
+//     console.log('kaam done');
+// }).catch(() => {
+//     console.log('fail ho gaya');
+// })
 
 
 
