@@ -1,0 +1,48 @@
+/*************************************** Downloaded Font */
+@font-face {
+    font-family: 'reckless';
+    src: url(./Assets/reckless.woff);
+}
+@font-face {
+    font-family: 'midnight bold';
+    src: url(./Assets/midnight\ medium.otf);
+}
+@font-face {
+    font-family: 'midnight medium';
+    src: url(./Assets/midnight\ semibold.otf);
+}
+@font-face{
+    font-family: 'figtree';
+    src: url(./Assets/figtree.woff2);
+}
+
+/**************************************** CSS Varaible */
+:root{
+    --primary-blue: #2a2857;
+    --reckless-font: 'reckless';
+    --midnight-m-font: 'midnight medium';
+    --midnight-b-font: 'midnight bold';
+    --figtree-font: 'figtree';
+}
+
+/*********************************** Universal CSS Applied */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+/********************************** Mobile first desing  */
+
+
+
+
+
+/***************************** For Laptop Media Quaries */
+@media (min-width: 1024px) {
+    
+}
