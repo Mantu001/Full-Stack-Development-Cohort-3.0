@@ -11,13 +11,13 @@
     font-family: 'midnight medium';
     src: url(./Assets/midnight\ semibold.otf);
 }
-@font-face{
+@font-face {
     font-family: 'figtree';
     src: url(./Assets/figtree.woff2);
 }
 
 /**************************************** CSS Varaible */
-:root{
+:root {
     --primary-blue: #2a2857;
     --reckless-font: 'reckless';
     --midnight-m-font: 'midnight medium';
@@ -27,60 +27,72 @@
 
 /*********************************** Universal CSS Applied */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html,body {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
-main{
+main {
     background-color: #FBF9EB;
     /* height: 150vh; */
     /* width: 100%; */
 }
-.btn{
+.btn1 {
     padding: 1rem 4rem;
     border-radius: 2rem;
     border: none;
+    font-size: 1.1rem;
+    background-color: var(--primary-blue);
+    color: white;
+}
+.tilt {
+    font-family: var(--midnight-b-font);
+    font-size: 2.5rem;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0 0.4rem;
+    transform: rotate(-2deg);
 }
 
 /********************************** Mobile first desing  */
 
 /********************** Nav Bar */
-header{
+header {
     padding: 1rem;
     position: sticky;
     top: 0;
     left: 0;
     /* width: 100%; */
 }
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* max-width: 100%; */
-    padding: 0.5rem 2rem ;
+    padding: 0.5rem 2rem;
     font-family: var(--reckless-font);
     border: 1px solid black;
     border-radius: 10px;
     background-color: #FFFEFB;
-    
+
 }
-.nav-left{
+.nav-left {
     display: flex;
     gap: 1rem;
     width: 33vw;
-    
+
 }
-.nav-center img{
+.nav-center img {
     height: 2.5rem;
 }
-.nav-left a{
+.nav-left a {
     font-size: 1.3rem;
 }
-.nav-right{
+.nav-right {
     display: flex;
     align-items: center;
     font-weight: 600;
@@ -88,30 +100,30 @@ nav{
     width: 33vw;
     justify-content: end;
 }
-.nav-right a{
+.nav-right a {
     font-size: 0.8rem;
 }
-nav i{
+nav i {
     font-size: 1.5rem;
     font-weight: 600;
     display: block;
 }
-a{
+a {
     text-decoration: none;
     color: black;
     display: none;
 }
 
 /*********************** Section 1 */
-.sec1{
+.sec1 {
     background-image: url(https://www.twoleavestea.com/cdn/shop/files/matcha_mobile.png?v=1779455800&width=511);
     background-position: center;
     background-size: cover;
-    height: 90vh;
+    min-height: 90vh;
     border-bottom: 1px solid black;
-    
+
 }
-.hero-text{
+.hero-text {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -120,44 +132,167 @@ a{
     padding: 1.2rem;
     padding-top: 15rem;
 }
-.hero-text h1{
+.hero-text h1 {
     /* font-size: clamp(3.5rem, 3vw, 8rem); */
     font-size: 4rem;
     font-family: var(--reckless-font);
     font-weight: 300;
 }
-.hero-text p{
+.hero-text p {
     font-size: 1.2rem;
     font-weight: var(--figtree-font);
     font-weight: 400;
 }
-.hero-text button{
-    font-size: 1.1rem;
-    background-color: var(--primary-blue);
-    color: white;
+/************************ Section 2  */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
 }
-
-
-
+.sec2 h2 {
+    font-family: var(--reckless-font);
+    font-weight: 300;
+    font-size: 2.3rem;
+    padding: 3rem 0;
+    text-align: center;
+}
+.sec2 h3 {
+    background-color: #DAAEEA;
+}
+.container {
+    height: 80vh;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* background-color: palevioletred; */
+}
+.card {
+    flex-shrink: 0;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.card-top {
+    border-radius: 1rem;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+    height: 70%;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+}
+.card-top:hover {
+    cursor: pointer;
+}
+#card1 {
+    background-color: #C1EE91;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/organic_tropical_green_tea_sachet_featured.webp?v=1771579242&width=900);
+}
+#card2 {
+    background-color: #B0E8C1;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/peppermint_naked_featured.webp?v=1771580547&width=600.0);
+}
+#card3 {
+    background-color: #FFCB96;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/Latte_Mix_b400f40c-730f-4122-9058-cfc4e5bf8faf.webp?v=1771389945&width=240);
+}
+#card4 {
+    background-color: #C0E571;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/Latte_Mix.webp?v=1771386671&width=240);
+}
+#card5 {
+    background-color: #FFD1B8;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/organic_high_mountain_chai_tea_sachet_featured.webp?v=1771578289&width=240);
+}
+#card6 {
+    background-color: #C1E4F8;
+    background-image: url(https://www.twoleavestea.com/cdn/shop/files/Bamboo_Tea_Chest.webp?v=1772543139&width=450.0);
+}
+.card-top h4 {
+    position: absolute;
+    left: 5%;
+    border: 1px solid black;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 5px;
+    font-family: var(--midnight-m-font);
+    font-size: 1.2rem;
+}
+.card-top i {
+    position: absolute;
+    right: 10%;
+    font-family: var(--figtree-font);
+}
+.card-top p {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    padding: 0.2rem 1.2rem;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-family: var(--figtree-font);
+}
+.card-top p>span {
+    font-size: 2.5rem;
+}
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+.card-bottom h4 {
+    font-size: 1.5rem;
+    font-family: var(--reckless-font);
+    font-weight: 300;
+}
+.card-bottom h5 {
+    font-size: 1rem;
+    font-family: var(--figtree-font);
+    font-weight: 300;
+}
+.card-bottom p {
+    font-size: 1rem;
+    font-family: var(--figtree-font);
+    font-weight: 300;
+}
+.sec2 #btns{
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
 
 /***************************** For Laptop Media Quaries */
 @media (min-width: 900px) {
+
     /* Nav Bar */
-    nav a{
+    nav a {
         display: block;
     }
-    .nav-left i{
+    .nav-left i {
         display: none;
     }
     /* Section 1 */
-    .sec1{
-    background-image: url(https://www.twoleavestea.com/cdn/shop/files/cere-memorial_matcha_wide.png?v=1779304660&width=1280);
-    background-position: center;
-    background-size: cover;
+    .sec1 {
+        background-image: url(https://www.twoleavestea.com/cdn/shop/files/cere-memorial_matcha_wide.png?v=1779304660&width=1280);
+        background-position: center;
+        background-size: cover;
     }
-    .hero-text{
+    .hero-text {
         align-items: start;
         text-align: start;
         max-width: 40vw;
+    }
+
+    /* Section 2 */
+    .card {
+        width: 20%;
     }
 }
