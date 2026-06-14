@@ -16,7 +16,7 @@
     src: url(./Assets/figtree.woff2);
 }
 
-/**************************************** CSS Varaible */
+/********************************** CSS Varaible */
 :root {
     --primary-blue: #2a2857;
     --reckless-font: 'reckless';
@@ -83,7 +83,7 @@ main {
     transition: all ease 0.2s;
 }
 
-/********************************** Mobile first desing  */
+/************************************************************************* Mobile first desing  */
 
 /********************** Nav Bar */
 header {
@@ -91,25 +91,21 @@ header {
     position: sticky;
     top: 0;
     left: 0;
-    /* width: 100%; */
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 100%; */
     padding: 0.5rem 2rem;
     font-family: var(--reckless-font);
     border: 1px solid black;
     border-radius: 10px;
     background-color: #FFFEFB;
-
 }
 .nav-left {
     display: flex;
     gap: 1rem;
     width: 33vw;
-
 }
 .nav-center img {
     height: 2.5rem;
@@ -147,19 +143,16 @@ a {
     background-size: cover;
     min-height: 90vh;
     border-bottom: 1px solid black;
-
 }
 .hero-text {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 1.5rem;
     text-align: center;
     padding: 1.2rem;
     padding-top: 15rem;
 }
 .hero-text h1 {
-    /* font-size: clamp(3.5rem, 3vw, 8rem); */
     font-size: 4rem;
     font-family: var(--reckless-font);
     font-weight: 300;
@@ -169,6 +162,7 @@ a {
     font-weight: var(--figtree-font);
     font-weight: 400;
 }
+
 /************************ Section 2  */
 .text-container {
     display: flex;
@@ -192,7 +186,6 @@ a {
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    /* background-color: palevioletred; */
 }
 .card {
     flex-shrink: 0;
@@ -356,6 +349,7 @@ a {
 .feature h5:hover{
     background-color: #99c0f4;
 }
+
 /************************************* Section 4 */
 .sec4{
     background-image: url(https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=2000);
@@ -397,7 +391,6 @@ a {
     gap: 4rem;
     flex-wrap: wrap;
     padding: 2rem;
-
 }
 .cartoon img{
     width: 20vmin;
@@ -409,7 +402,6 @@ a {
     flex-direction: column;
     padding: 5rem 1rem;
     gap: 5rem;
-    /* align-items: center; */
 }
 .sec5 .top{
     display: flex;
@@ -482,20 +474,15 @@ a {
 .box-left{
     border: 1px solid black;
     grid-area: box-left;
-    /* border-radiuso: 1rem; */
     border-radius: 1rem 0 0 1rem;
-    
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 25%; */
-    /* max-width: 5rem; */
 }
 .box-left img{
     width: 5rem;
 }
 .box-right{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -527,7 +514,6 @@ a {
     flex-direction: column;
     overflow: hidden;    
 }
-
 .right{
     background-color: #2A2857; 
     color: white;
@@ -586,15 +572,6 @@ footer .social{
 }
 .social i:hover{
     background-color: #99c0f4;
-}
-.foot-img{
-    background-color: red;
-    height: 60vmax;
-    overflow: hidden;
-    object-fit: cover;
-}
-.foot-img img{
-    width: 100vw;
 }
 
 /***************************** For Laptop Media Quaries */
