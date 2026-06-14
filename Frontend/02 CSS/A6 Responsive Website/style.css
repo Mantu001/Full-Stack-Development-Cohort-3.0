@@ -512,6 +512,46 @@ a {
 }
 
 
+footer{
+    background-color: #C0DBFF;
+}
+footer .content{
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+footer h3{
+    font-family: var(--midnight-b-font);
+    font-size: 2rem;
+}
+footer h5{
+    font-family: var(--reckless-font);
+    font-size: 2rem;
+    font-weight: 200;
+}
+footer input{
+    padding: 1.5rem ;
+    border-radius: 0.8rem;
+}
+footer .social{
+    font-size: 2rem;
+}
+.social i{
+    border: 1px solid black; 
+    border-radius: 50%;
+    padding: 0.6rem;
+}
+.foot-img{
+    background-color: red;
+    height: 60vmax;
+    overflow: hidden;
+    object-fit: cover;
+}
+.foot-img img{
+    width: 100vw;
+}
+
 /***************************** For Laptop Media Quaries */
 @media (min-width: 900px) {
 
@@ -552,4 +592,25 @@ a {
         justify-content: center;
         padding: 5rem;
     }
+
+    /* Footer */
+    /* footer{
+        padding: 1rem 5rem;
+    }
+    footer input{
+        width: fit-content;
+        display: inline-block;
+    }
+    footer button{
+        width: fit-content;
+        display: inline-block;
+    } */
+    footer{
+        padding: 2rem 5rem;
+
+    }
+    .content{
+        width: 40%;
+    }
+     
 }
