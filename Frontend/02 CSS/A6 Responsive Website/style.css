@@ -481,6 +481,36 @@ a {
 
 }
 
+/* Section 6 */
+.sec6{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;    
+}
+
+.right{
+    background-color: #2A2857; 
+    color: white;
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    text-align: center;
+    margin: -10px;
+}
+.sec6 .right h1{
+    font-family: var(--reckless-font);
+    font-size: 3rem;
+    font-weight: 300;
+}
+.sec6 .right p{
+    font-family: var(--figtree-font);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
 
 /***************************** For Laptop Media Quaries */
 @media (min-width: 900px) {
@@ -507,5 +537,19 @@ a {
     /* Section 2 */
     .card {
         width: 20%;
+    }
+
+    /* section 6 */
+    .sec6{
+        flex-direction: row;
+    }
+    .sec6 img{
+        width: 50vw;
+    }
+    .sec6 .right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
     }
 }
