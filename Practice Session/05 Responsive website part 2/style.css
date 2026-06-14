@@ -138,7 +138,6 @@ nav{
     align-items: center;
     padding: 3rem 1rem;
     overflow-x: auto; /*this will help to make horizontal scroll for specific element*/
-    
 }
 .card{
     flex-shrink: 0;
