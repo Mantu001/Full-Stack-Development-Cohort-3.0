@@ -43,10 +43,16 @@ main {
 .btn1 {
     padding: 1rem 4rem;
     border-radius: 2rem;
-    border: none;
     font-size: 1.1rem;
     background-color: var(--primary-blue);
     color: white;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.btn1:hover{
+    background-color: white;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
 }
 .btn2{
     padding: 1rem 4rem;
@@ -55,6 +61,12 @@ main {
     font-size: 1.1rem;
     background-color: white;
     color: var(--primary-blue);
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.btn2:hover{
+    background-color: var(--primary-blue);
+    color: white;
 }
 .tilt {
     font-family: var(--midnight-b-font);
@@ -64,6 +76,11 @@ main {
     border-radius: 1vmax;
     padding: 0 0.4rem;
     transform: rotate(-2deg);
+    cursor: pointer;
+}
+.tilt:hover{
+    transform: rotate(0);
+    transition: all ease 0.2s;
 }
 
 /********************************** Mobile first desing  */
@@ -96,6 +113,7 @@ nav {
 }
 .nav-center img {
     height: 2.5rem;
+    cursor: pointer;
 }
 .nav-left a {
     font-size: 1.3rem;
@@ -230,6 +248,12 @@ a {
     border-radius: 5px;
     font-family: var(--midnight-m-font);
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.card-top h4:hover{
+    background-color: var(--primary-blue);
+    color: white;
 }
 .card-top i {
     position: absolute;
@@ -246,6 +270,12 @@ a {
     text-align: center;
     border-radius: 10px;
     font-family: var(--figtree-font);
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.card-top p:hover{
+    background-color: var(--primary-blue);
+    color: white;
 }
 .card-top p>span {
     font-size: 2.5rem;
@@ -277,7 +307,7 @@ a {
     padding: 5rem;
 }
 
-/* Section 3 */
+/********************************** Section 3 */
 .sec3{
     border-top: 1px solid black;
 }
@@ -320,9 +350,13 @@ a {
     border-radius: 10px;
     border: 1px solid black;
     background-color: #DAEAFF;
+    cursor: pointer;
+    transition: all ease 0.2s;
 }
-
-/* Section 4 */
+.feature h5:hover{
+    background-color: #99c0f4;
+}
+/************************************* Section 4 */
 .sec4{
     background-image: url(https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=2000);
     display: flex;
@@ -369,7 +403,7 @@ a {
     width: 20vmin;
 }
 
-/* Section 5 */
+/*************************************** Section 5 */
 .sec5{
     display: flex;
     flex-direction: column;
@@ -404,6 +438,7 @@ a {
     grid-template-columns: 3fr 7fr;
     min-height: 70vh;
     max-width: 90vw;
+    cursor: pointer;
     border: 1px solid black;
     border-radius: 1rem;
     grid-template-areas: 
@@ -478,10 +513,15 @@ a {
     background-color: white;
     border-radius: 40px;
     font-size: 1.2rem;
-
+    transition: all ease 0.2s;
+}
+.box-right button:hover{
+    border-radius: 40px;
+    font-size: 1.1rem;
+    padding: 1.1rem;
 }
 
-/* Section 6 */
+/**************************************** Section 6 */
 .sec6{
     display: flex;
     flex-direction: column;
@@ -511,7 +551,7 @@ a {
     font-weight: 300;
 }
 
-
+/******************************** Footer */
 footer{
     background-color: #C0DBFF;
 }
@@ -541,6 +581,11 @@ footer .social{
     border: 1px solid black; 
     border-radius: 50%;
     padding: 0.6rem;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.social i:hover{
+    background-color: #99c0f4;
 }
 .foot-img{
     background-color: red;
@@ -554,7 +599,6 @@ footer .social{
 
 /***************************** For Laptop Media Quaries */
 @media (min-width: 900px) {
-
     /* Nav Bar */
     nav a {
         display: block;
@@ -562,6 +606,7 @@ footer .social{
     .nav-left i {
         display: none;
     }
+
     /* Section 1 */
     .sec1 {
         background-image: url(https://www.twoleavestea.com/cdn/shop/files/cere-memorial_matcha_wide.png?v=1779304660&width=1280);
@@ -594,23 +639,10 @@ footer .social{
     }
 
     /* Footer */
-    /* footer{
-        padding: 1rem 5rem;
-    }
-    footer input{
-        width: fit-content;
-        display: inline-block;
-    }
-    footer button{
-        width: fit-content;
-        display: inline-block;
-    } */
     footer{
         padding: 2rem 5rem;
-
     }
     .content{
         width: 40%;
     }
-     
 }
