@@ -73,6 +73,15 @@ const text = document.createTextNode('dom')
 h4.appendChild(text)
 body.appendChild(h4)
 
+// Attributs examples
+const colorBtn = document.querySelector('.ylow')
+console.log(colorBtn.getAttribute('class'));
+colorBtn.setAttribute('id', 'change')
+console.log(colorBtn.getAttribute('id'));
+colorBtn.classList.add('unique')
+colorBtn.removeAttribute('class')
+
+
 
 
 

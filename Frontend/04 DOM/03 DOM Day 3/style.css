@@ -28,3 +28,6 @@ html,body {
     padding: 1rem;
     border: 1px solid rgb(251, 71, 0);
 }
+.red{
+    background-color: palegoldenrod;
+}
