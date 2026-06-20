@@ -11,21 +11,23 @@
 const main = document.querySelector("main");
 const btn = document.querySelector("button");
 const t = document.querySelector(".time");
-const s = document.querySelector('.score')
-const box = document.createElement('div')
-const overlay = document.querySelector('#overlay')
-box.classList.add('box')
+const s = document.querySelector(".score");
+const overlay = document.querySelector("#overlay");
+// 1. Create the box once and add it to the page immediately, but keep it hidden
+const box = document.createElement("div");
+box.classList.add("box");
+box.style.display = "none"; // Hide it until the game starts
+main.append(box);
 let time = 0;
 let score = 0;
 let move;
 const randomColor = () => {
-    const r = Math.floor(Math.random() * 256)
-    const g = Math.floor(Math.random() * 256)
-    const b = Math.floor(Math.random() * 256)
-    return (`rgb(${r},${g},${b})`);
-}
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r},${g},${b})`;
+};
 const randomBox = () => {
-  main.append(box)
   t.innerHTML = `<p>Time : ${time++} sec </p>`;
   const top = Math.floor(Math.random() * 90);
   const left = Math.floor(Math.random() * 90);
@@ -33,18 +35,23 @@ const randomBox = () => {
   box.style.top = top + "%";
 };
 btn.addEventListener("click", () => {
-  randomBox()
+  time = 0;
+  score = 0;
+  s.innerHTML = `<p class="score">Score : ${score}</p>`;
+  box.style.display = "block"; // Make the box visible when game starts
+  randomBox();
   move = setInterval(() => {
-    box.style.backgroundColor = randomColor()
+    box.style.backgroundColor = randomColor();
     randomBox();
   }, 1000);
   setTimeout(() => {
     clearInterval(move);
-    overlay.style.display = 'flex'
+    box.style.display = "none"; // Hide the box when game ends
+    overlay.style.display = "flex";
     console.log("stopped");
   }, 10000);
 });
-box.addEventListener('click', () => {
-    s.innerHTML = `<p class="score">Score : ${score++}</p>`
-})
-
+box.addEventListener("click", () => {
+  score++;
+  s.innerHTML = `<p class="score">Score : ${score}</p>`;
+});
