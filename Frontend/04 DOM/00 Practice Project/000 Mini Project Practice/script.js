@@ -66,5 +66,4 @@ togg.addEventListener('click', () => {
     }else{
         togg.style.justifyContent = 'flex-start'
     }
-   
 })
