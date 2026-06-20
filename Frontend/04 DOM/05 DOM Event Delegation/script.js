@@ -10,11 +10,13 @@
 // Start button pe click karo ye apna position change karega
 const main = document.querySelector("main");
 const btn = document.querySelector("button");
-const p = document.querySelector("p");
+const t = document.querySelector(".time");
+const s = document.querySelector('.score')
 const box = document.createElement('div')
 const overlay = document.querySelector('#overlay')
 box.classList.add('box')
 let time = 0;
+let score = 0;
 let move;
 const randomColor = () => {
     const r = Math.floor(Math.random() * 256)
@@ -24,7 +26,7 @@ const randomColor = () => {
 }
 const randomBox = () => {
   main.append(box)
-  p.innerHTML = `<p>Time : ${time++} sec </p>`;
+  t.innerHTML = `<p>Time : ${time++} sec </p>`;
   const top = Math.floor(Math.random() * 90);
   const left = Math.floor(Math.random() * 90);
   box.style.left = left + "%";
@@ -42,5 +44,7 @@ btn.addEventListener("click", () => {
     console.log("stopped");
   }, 10000);
 });
-
+box.addEventListener('click', () => {
+    s.innerHTML = `<p class="score">Score : ${score++}</p>`
+})
 
