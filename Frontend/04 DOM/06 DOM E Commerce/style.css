@@ -86,6 +86,14 @@ button{
     display: none;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.cross i{
+    padding-bottom: 1rem;
+    font-weight: 900;
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
 }
 form{
     background-color: white;
