@@ -13,7 +13,7 @@ let updateIndex = null
 
 let ui = () => {
   product.innerHTML = ''
-  productArr.forEach((e) => {
+  productArr.forEach((e,i) => {
     product.innerHTML += `<div class="product-card">
                             <div class="pic">
                                 <img src= ${e.image} alt="">
@@ -25,7 +25,7 @@ let ui = () => {
                             </div>
                             <div class="btns">
                                 <button onClick="updateProduct('${e.productName}')" class="update">Update</button>
-                                <button class="delete">Delete</button>
+                                <button onClick="deleteProduct(${i})" class="delete">Delete</button>
                             </div>
                         </div>`;
   });
@@ -85,4 +85,9 @@ const updateProduct = (name) => {
   form[1].value = prod.description
   form[2].value = prod.price
   form[3].value = prod.image
+}
+
+const deleteProduct = (i) => {
+    productArr.splice(i,1)
+    ui()
 }
