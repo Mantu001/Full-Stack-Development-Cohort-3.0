@@ -7,7 +7,9 @@ const closeBtn = document.querySelector(".ri-close-circle-line");
 const form = document.querySelector("form");
 const inp = document.querySelector("input");
 const product = document.querySelector(".product");
+const formBtn = document.querySelector(".form-btn")
 const productArr = [];
+let updateIndex = null
 
 let ui = () => {
   product.innerHTML = ''
@@ -59,7 +61,11 @@ form.addEventListener("submit", (e) => {
     price,
     image,
   };
-  productArr.push(obj);
+  if (updateIndex !== null){
+    productArr[updateIndex] = obj
+  }else{
+    productArr.push(obj);
+  }
   console.log(productArr);
   ui()
   form.reset();
@@ -67,10 +73,16 @@ form.addEventListener("submit", (e) => {
 });
 
 const updateProduct = (name) => {
-    // formClass.style.display = "flex";
-    // console.log(name);
-    let prod = productArr.find((e) => {
-        return e.productName === name;
-    })
-    console.log(prod);
+  formClass.style.display = "flex";
+  formBtn.textContent = 'Update'
+  let prod = productArr.find((e) => {
+    return e.productName === name;
+  })
+  updateIndex = productArr.findIndex((e) => {
+      return e.productName === name;
+  })
+  form[0].value = prod.productName
+  form[1].value = prod.description
+  form[2].value = prod.price
+  form[3].value = prod.image
 }
