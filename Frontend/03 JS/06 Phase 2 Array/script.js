@@ -3,14 +3,17 @@ var arr = [23,34,74,9,4,8]
 arr.forEach(() => {
     console.log('this is forEach loop printing console statement');
 })
-arr.forEach(function value(a){
-    console.log('printing value', a);
+// arr.forEach(function value(a){
+//     console.log('printing value', a);
+// })
+arr.forEach((a) => {
+    console.log('printing value',a);
 })
 var s = 0;
 arr.forEach(function sum(elem) {
     s = s+elem
 })
-console.log(s);
+console.log('sum',s);
 
 // Map 
 var brr = [1,2,3,4,5]
@@ -75,3 +78,23 @@ var cResult = c.find((elem) => {
     return elem == 'Mantu'
 })
 console.log(cResult);
+
+// Find and findIndex concept
+const nums = [1,2,5,6,8,9]
+const eleAns = nums.find((e) => {
+    return e>6
+})
+const idxAns = nums.findIndex((e) => {
+    return e>6
+})
+console.log(nums);
+console.log(eleAns);
+console.log(idxAns);
+
+// Array Destructuring
+const arr1 = [10,20,30,40]
+const [aa,bb,cc,dd] = arr1
+console.log(aa,bb,cc,dd);
+const arr2 = [...arr1] 
+console.log(arr2);
+console.log(arr2[1]);
