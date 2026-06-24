@@ -8,7 +8,7 @@ const form = document.querySelector("form");
 const inp = document.querySelector("input");
 const product = document.querySelector(".product");
 const formBtn = document.querySelector(".form-btn")
-const productArr = [];
+const productArr = JSON.parse(localStorage.getItem('products')) || [];
 let updateIndex = null
 
 let ui = () => {
@@ -30,7 +30,7 @@ let ui = () => {
                         </div>`;
   });
 };
-
+ui()
 
 createBtn.addEventListener("click", () => {
   formClass.style.display = "flex";
@@ -46,6 +46,7 @@ form.addEventListener("submit", (e) => {
   let description = e.target[1].value;
   let price = e.target[2].value;
   let image = e.target[3].value;
+
   if (
     productName.trim() === "" ||
     description.trim() === "" ||
@@ -55,17 +56,22 @@ form.addEventListener("submit", (e) => {
     alert("Kindly Fill All Details");
     return;
   }
+
   let obj = {
     productName,
     description,
     price,
     image,
   };
+
   if (updateIndex !== null){
     productArr[updateIndex] = obj
+    localStorage.setItem('products', JSON.stringify(productArr))
   }else{
     productArr.push(obj);
+    localStorage.setItem('products', JSON.stringify(productArr))
   }
+
   console.log(productArr);
   ui()
   form.reset();
@@ -89,5 +95,6 @@ const updateProduct = (name) => {
 
 const deleteProduct = (i) => {
     productArr.splice(i,1)
+    localStorage.setItem('products', JSON.stringify(productArr))
     ui()
 }
