@@ -59,6 +59,29 @@ let num = Number(str)
 console.log(typeof(str));
 console.log(typeof(num));
 
+// var let const concept
+var aa = 12
+let bb = 34
+const cc = 45
+console.log(aa);
+console.log(bb);
+console.log(cc);
+aa = 10
+bb = 30
+console.log(aa); // var reassign ho gaya
+console.log(bb); // let bhi reassign ho gaya
+// cc = 40       // const error fek diya
+
+// Symbol data types
+const id = Symbol('this is symbol data types')
+console.log(id);
+console.log(typeof(id));
+
+let s = 'Hello '
+const update = s.toUpperCase()
+console.log(update);
+console.log(s);
+
 
 
 
