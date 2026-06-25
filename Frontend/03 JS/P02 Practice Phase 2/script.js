@@ -176,6 +176,194 @@ console.log(global(10));
 console.log(global(10));
 
 
+// ////////////////////// Part 2 — Advanced Functions (21–35)
+
+// 1.Write a recursive function for factorial.
+function fact(num) {
+    if (num<=1) return 1
+    return num*fact(num-1)
+}
+console.log('Factorial is ',fact(5));
+
+// 2. Write recursive Fibonacci function.
+function fibo(n) {
+    if(n == 1){
+        return 0
+    }else if(n == 2){
+        return 1
+    }
+    return fibo(n-1)+fibo(n-2)
+}
+let n = 9
+console.log(`The ${n}th serie in fibonacci is: ${fibo(n)}`);
+
+// 3. Create a function that finds power using recursion.
+function power (n,p){
+    if (p === 0) return 1
+    return n*power(n,p-1)
+}
+console.log(`The power of number is ${power(3,4)}`);
+
+// 4. Create an IIFE that prints "Executed".
+(() => {
+    console.log('executed');
+})()
+
+// 5. Write a function that memoizes factorial calculation.
+// here memorization means store the previous value which help to prevelt the repeated calculation for the same
+const cache = {}
+function fa(n) {
+    if(n in cache){
+        return cache[n]
+    }
+    if(n <= 1) return 1
+    cache[n] = n*fa(n-1)
+    return cache[n]
+}
+console.log(`the factorial is : ${fa(7)}`);
+console.log(cache);
+
+// 6. Create a closure counter function.
+function counter() {
+    count = 0
+    return function () {
+        count ++
+        return count
+    }
+}
+const increase = counter()
+console.log('counter',increase());
+console.log('counter',increase());
+
+// 7. Write a function currying example for addition.
+// function ke andar function pass karna aur isme sab apne parent ke funciton ke argument ko access kar paye
+function add(a) {
+    return function(b) {
+        return function (c){
+            return a+b+c
+        }
+    }
+}
+console.log('add',add(1)(2)(3));
+
+// 8. Create debounce function logic.
+//  it limits the frequent exucutes of the function it run after a certain time 
+function debounce(fn,delay){
+    let timer
+    return function (){
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            fn()
+        }, delay);
+    };
+}
+function greet() {
+    console.log('hello');
+}
+const debounceGreet = debounce(greet,2000)
+debounceGreet()
+debounceGreet()
+
+// 9. Create throttle function logic.
+// ek speicfic time interval me ek baar hi chalega ex scorll me use hoga
+function throttle(fn,delay) {
+    let shouldCall = true
+    return function(...args){
+        if(!shouldCall) return
+        fn(...args)
+        shouldCall = false
+        setTimeout(() => {
+            shouldCall = true
+        },delay)
+    }
+}
+function greet() {
+    console.log('Hello');
+}
+const throttleGreet = throttle(greet,2000)
+throttleGreet()
+
+// 10. Write a function that executes only once.
+function once(fn){
+    let called = false
+    return function (...args){
+        if (called) return 
+        called = true
+        return fn(...args)
+    }
+}
+function onlyOnce(){
+    console.log('Sirf ek baar call hoga');
+}
+const greetOnce = once(onlyOnce)
+greetOnce()
+
+// 11.Create custom implementation of map.
+Array.prototype.myMap = function (callback) {
+    const result = []
+    for (let i=0; i<this.length; i++){
+        result.push(callback(this[i], i, this))
+    }
+    return result
+}
+const arr = [2,3,4]
+const resultMap = arr.myMap((e,i) => {
+    return e*2
+})
+console.log(resultMap);
+
+// 12. Create custom implementation of filter.
+Array.prototype.myFilter = function(cb){
+    const result = []
+    for (let i=0; i<this.length; i++){
+        if (cb(this[i], i, this)){
+            result.push(this[i])
+        }
+    }
+    return result
+}
+const resultFilter = arr.myFilter((e) => {
+    return e>2
+})
+console.log(resultFilter);
+
+// 13. Create custom implementation of reduce.
+Array.prototype.myReduce = function (callback, initValue) {
+    let acc = initValue
+    for (let i=0; i<this.length; i++){
+        acc = callback(acc, this[i], i, this);
+    }
+    return acc
+}
+const resultReduce = arr.myReduce((acc,curr) => {
+    return acc + curr
+},0)
+console.log(resultReduce);
+
+// 14. Create custom forEach.
+Array.prototype.myForEach = function (cb){
+    const result = []
+    for (let i=0; i<this.length; i++){
+        cb(this[i], i, this)
+    }
+}
+arr.myForEach((e,i) => {
+    console.log(e,i);
+})
+
+// 15. Explain output: 
+function test() {
+    return;
+    console.log("Hello");
+}
+console.log(test());
+// output is undefined because function doesn't read the hello because it return before the console 
+
+
+
+
+
+
 // // Concept Revision Practice
 // function test1(user){
 //     console.log('Function Decleration', user);
