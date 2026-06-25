@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+        <!------------------------- Nav -->
+      <nav>
+        <h1>Task Manager</h1>
+        <div class="dark-mode"><i class="ri-moon-fill"></i></div>
+      </nav>
+
+      <!------------------------- Create Button -->
+      <div class="create-btn">
+        <button>Create Task</button>
+      </div>
+
+      <!------------------------------ Task Container Section -->
+      <section class="task-container">
+        <div class="top">
+          <h4>Task</h4>
+          <input type="text" placeholder="Search Task" />
+        </div>
+        <div class="bottom">
+          <div class="task">
+            <div class="task-text">
+              <h3>Task title</h3>
+              <p>Task Category</p>
+            </div>
+            <div class="task-btn">
+              <button class="edit">Edit</button>
+              <button class="complete">Complete</button>
+              <button class="delete">Edit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!----------------------------------- Form -->
+      <div class="form">
+        <form>
+          <h3>Add New Task</h3>
+          <label for="task-title">Task Title</label>
+          <input type="text" placeholder="Enter Task Title" />
+          <label for="escription">Description</label>
+          <input type="text" placeholder="Enter Description" />
+          <label for="category">Category</label>
+          <select name="task" id="task">
+            <option selected value="all-categories">All Categories</option>
+            <option value="personal">Personal</option>
+            <option value="study">Study</option>
+            <option value="shopping">Shopping</option>
+            <option value="health">Health</option>
+          </select>
+          <button class="add-task">Add Task</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
