@@ -56,8 +56,20 @@ const virtualDom = ReactDOM.createRoot(realDom);
 virtualDom.render(newElemnt);
 // console.log(virtualDom);
 
-// Import file form other js file 
-import { transfer,sum } from "./main.js";
+// Import file form other js file
+import { transfer, sum } from "./main.js";
 // import {sum} from "./main.js"
-console.log('This is imported from main.js file',transfer);
-console.log('Sum is: ',sum(50,70));
+console.log("This is imported from main.js file", transfer);
+console.log("Sum is: ", sum(50, 70));
+
+// practice to create element in virtual dom
+const virtualDiv = React.createElement("div", {}, [
+  React.createElement(
+    "h1",
+    {},
+    React.createElement("span", {}, "This is span"),
+  ),
+  React.createElement("div", { class: "newDiv" }, "this is new div"),
+]);
+virtualDom.render(virtualDiv);
+console.log(virtualDiv);
