@@ -43,7 +43,7 @@ let ui = () => {
             <div class="task-btn">
               <button onClick="updateTask('${e.task}')" class="edit">Edit</button>
               <button class="complete">Complete</button>
-              <button class="delete">Delete</button>
+              <button onClick="deleteTask(${i})" class="delete">Delete</button>
             </div>
           </div>`
     })
@@ -95,5 +95,10 @@ const updateTask = (task) => {
     form[0].value = taskList.task
     form[1].value = taskList.description
     form[2].value = taskList.category
+}
+
+const deleteTask = (index) => {
+    taskArr.splice(index,1)
+    ui()
 }
 
