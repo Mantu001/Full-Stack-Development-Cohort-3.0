@@ -7,6 +7,8 @@ const darkMode = document.querySelector('.dark-mode')
 const taskContainer = document.querySelector('.task-container')
 const nav = document.querySelector('nav')
 const form = document.querySelector('form')
+const container = document.querySelector('.bottom')
+const taskArr = []
 
 createBtn.addEventListener('click',() => {
     formClass.style.display = 'flex'
@@ -28,16 +30,33 @@ darkMode.addEventListener('click',() => {
     }
 })
 
-const taskArr = []
+let ui = () => {
+    container.innerHTML = ''
+    taskArr.forEach((e,i) => {
+        container.innerHTML += `<div class="task">
+            <div class="task-text">
+              <h3>Task: ${e.task}</h3>
+              <p>Category: ${e.category}</p>
+            </div>
+            <div class="task-btn">
+              <button class="edit">Edit</button>
+              <button class="complete">Complete</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>`
+    })
+}
+
+
 form.addEventListener('submit',(e) => {
     e.preventDefault()
     let task = e.target[0].value
     let description = e.target[1].value
-    let value = e.target[2].value
+    let category = e.target[2].value
     if (
         task.trim() === '' ||
         description.trim() === '' ||
-        value === 'All Categories' 
+        category === 'All Categories' 
     ){
         alert('Kindly Fill all details')
         return
@@ -45,10 +64,11 @@ form.addEventListener('submit',(e) => {
     let obj = {
         task,
         description,
-        value
+        category
     }
     taskArr.push(obj)
+    ui()
     console.log(taskArr);
-    // console.log(obj);
     form.reset()
+    formClass.style.display = 'none'
 })
