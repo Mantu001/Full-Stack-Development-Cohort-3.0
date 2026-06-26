@@ -8,7 +8,9 @@ const taskContainer = document.querySelector('.task-container')
 const nav = document.querySelector('nav')
 const form = document.querySelector('form')
 const container = document.querySelector('.bottom')
+const formBtn = document.querySelector('.add-task')
 const taskArr = []
+let updateIdx = null
 
 createBtn.addEventListener('click',() => {
     formClass.style.display = 'flex'
@@ -39,7 +41,7 @@ let ui = () => {
               <p>Category: ${e.category}</p>
             </div>
             <div class="task-btn">
-              <button class="edit">Edit</button>
+              <button onClick="updateTask('${e.task}')" class="edit">Edit</button>
               <button class="complete">Complete</button>
               <button class="delete">Delete</button>
             </div>
@@ -66,9 +68,32 @@ form.addEventListener('submit',(e) => {
         description,
         category
     }
-    taskArr.push(obj)
+    if(updateIdx !== null){
+        taskArr[updateIdx] = obj
+        updateIdx = null
+        formBtn.textContent = 'Add Task'
+    }else{
+        taskArr.push(obj)
+    }
+    
     ui()
-    console.log(taskArr);
     form.reset()
     formClass.style.display = 'none'
 })
+
+const updateTask = (task) => {
+    // console.log(task);
+    formClass.style.display = 'flex'
+    formBtn.textContent = 'Update'
+    const taskList = taskArr.find((e) => {
+        return e.task === task
+    })
+    updateIdx = taskArr.findIndex((e) => {
+        return e.task === task
+    })
+    console.log(updateIdx);
+    form[0].value = taskList.task
+    form[1].value = taskList.description
+    form[2].value = taskList.category
+}
+
