@@ -73,3 +73,23 @@ const virtualDiv = React.createElement("div", {}, [
 ]);
 virtualDom.render(virtualDiv);
 console.log(virtualDiv);
+
+// const body = document.body
+// const main = document.querySelector('main')
+// const h2 = document.createElement('h2')
+// h2.classList.add('testing')
+// h2.textContent = 'hello this is real dom created by js'
+// main.append(h2)
+
+
+// console.log(React);
+// const root = document.querySelector('.react-elem')
+// const reactElem = React.createElement(
+//   'h2',
+//   {class: 'testing'},
+//   'This is h2 created by react'
+// )
+// const store = ReactDOM.createRoot(root)
+// store.render(reactElem)
+// console.log(typeof(reactElem));
+// console.log(reactElem);
