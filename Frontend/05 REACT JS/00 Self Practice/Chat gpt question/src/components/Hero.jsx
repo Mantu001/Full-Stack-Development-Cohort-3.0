@@ -1,9 +1,17 @@
-let Hero = (props) => {
+// let Hero = (props) => {
+//     return (
+//         <div>
+//             <h4>This is Hero section {props.heading}</h4>
+//             <button>{props.button}</button>
+//         </div>
+//     )
+// }
+let Hero = ({heading, button}) => {
     return (
-        <div>
-            <h4>This is Hero section {props.heading}</h4>
-            <button>{props.button}</button>
-        </div>
+        <>
+            <h4>This is Hero section {heading}</h4>
+            <button>{button}</button>
+        </>
     )
 }
 
