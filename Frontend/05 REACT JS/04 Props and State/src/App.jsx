@@ -12,19 +12,31 @@
 // }
 // export default App
 
-import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
 
+// counter function
+import React, { useState } from "react";
+// import Navbar from "./components/Navbar";
+// import Hero from "./components/Hero";
+// import Footer from "./components/Footer";
 const App = () => {
+  let [count, setCount] = useState(0);
+  // console.log('hello');
   return (
     <div>
-      <Navbar />
+      <h1>Count : {count}</h1>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+          // count++;
+          // console.log(count);
+        }}
+      >
+        Click to Increase
+      </button>
+      {/* <Navbar />
       <Hero />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
-
 export default App;
